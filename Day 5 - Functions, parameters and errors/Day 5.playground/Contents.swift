@@ -54,3 +54,5 @@ func lightSwitch(_ settings: String, warning: Bool = true) {
 }
 
 lightSwitch("off", warning: false)
+
+// Variadic Fucntions
