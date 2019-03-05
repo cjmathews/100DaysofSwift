@@ -52,7 +52,13 @@ func lightSwitch(_ settings: String, warning: Bool = true) {
         print("The lights are \(settings).")
     }
 }
-
 lightSwitch("off", warning: false)
+
+func oneHundredDays(learning: Bool = true) {
+    if learning {
+        print("Progress!")
+    }
+}
+oneHundredDays()
 
 // Variadic Fucntions
