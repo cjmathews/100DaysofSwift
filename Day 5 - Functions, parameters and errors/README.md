@@ -24,3 +24,24 @@
 ### Default parameters
 - print has a default \n (newline) at the end of every call of print
 - Set a default using = defaultValue after the parameter's type
+
+### Variadic functions
+- Able to accept any number of parameters of the same type
+- Converts parameters to an array
+- Make variadic by using ... after the parameter type eg:
+	func cookTime(numbers: Int...)
+	
+### Throwing Functions
+- A way of throwing an error in the event of bad or poor data being passed into a function
+
+### Running Throwing Functions
+- do: start a section of code that might cause problems
+- try: used before every function that might throw an error
+- catch: handle errors gracefully
+
+### Inout Parameters
+- Normally parameters passed into a function cannot be changed in it - they are constants 
+- Using inout allows their value to be changed in the function, and passed back out
+- Must use variables, and when passing across use & in front of variable name to recognise that it is an inout parameter
+
+[Summary Day 5](https://www.hackingwithswift.com/sixty/5/11/functions-summary)
