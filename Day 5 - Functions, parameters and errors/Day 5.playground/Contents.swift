@@ -61,4 +61,44 @@ func oneHundredDays(learning: Bool = true) {
 }
 oneHundredDays()
 
-// Variadic Fucntions
+// Variadic Function
+func cookingTime(weight: Int...) {
+    for number in weight {
+        print ("Cook for \((number / 100) * 2 + 20) minutes.")
+    }
+}
+cookingTime(weight: 600, 900, 1400)
+
+// Throwing Functions
+enum PasswordError: Error {
+    case obvious
+}
+func checkPassword(_ password: String) throws -> Bool {
+    if password == "password" {
+        throw PasswordError.obvious
+    }
+    return true
+}
+do {
+    try checkPassword("password")
+    print("That password is good!")
+} catch {
+    print("You can't use that password.")
+}
+// Without using catch it just registers the error:
+// Playground execution terminated: An error was thrown and was not caught:
+// __lldb_expr_5.PasswordError.obvious
+
+// try checkPassword("password")
+
+// Inout parameters
+func daysLeft(number: inout Int) {
+    number -= 1
+    print ("There are \(number) days left in the year.")
+}
+var year = 365
+while year > 0 {
+    daysLeft(number: &year)
+}
+print ("Happy New Year!")
+
